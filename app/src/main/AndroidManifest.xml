@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.light.friends">
+
+    <permission android:name="com.example.light.friends.provider.READWRITE"/>
+
+    <uses-permission android:name="com.example.light.friends.provider.READWRITE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.WithActionBar" >
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".AddActivity"
+            android:parentActivityName=".MainActivity"
+            android:label="@string/add_friend_title"/>
+
+        <activity android:name=".EditActivity"
+            android:parentActivityName=".MainActivity"
+            android:label="@string/edit_friend_title"/>
+
+        <activity android:name=".SearchActivity"
+            android:parentActivityName=".MainActivity"
+            android:label="@string/search_friends_title"/>
+
+        <provider android:name="com.example.light.friends.FriendsProvider"
+            android:authorities="com.example.light.friends.provider"
+            android:exported="true"
+            android:readPermission="com.example.light.friends.READWRITE"
+            android:writePermission="com.example.light.friends.READWRITE"/>
+    </application>
+
+</manifest>

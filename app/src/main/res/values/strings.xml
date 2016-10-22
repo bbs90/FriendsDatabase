@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Friends</string>
+    <string name="main_search_title">S</string>
+    <string name="main_add_title">add</string>
+    <string name="main_deleteDatabase_title">de</string>
+    <string name="search_title">Enter</string>
+    <string name="add_friend_title">Sea</string>
+    <string name="edit_friend_title">Search</string>
+    <string name="search_friends_title">se</string>
+</resources>
